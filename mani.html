@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #yesButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #noButton {
+            background-color: #f44336;
+            color: white;
+            position: relative;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do You Love Me?</h1>
+    <p>Answer truthfully 😊</p>
+    <button id="yesButton" onclick="showLove()">Yes ❤️</button>
+    <button id="noButton" onmouseover="moveButton()">No 💔</button>
+
+    <div id="result"></div>
+
+    <script>
+        function showLove() {
+            document.getElementById("result").innerHTML = "Mai toh majak kar raha tha tumne seriously le liya kiya 🥱🥱";
+        }
+
+        function moveButton() {
+            var button = document.getElementById("noButton");
+            var randomX = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth));
+            var randomY = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight));
+
+            button.style.position = "absolute";
+            button.style.left = randomX + "px";
+            button.style.top = randomY + "px";
+        }
+    </script>
+</body>
+</html>
